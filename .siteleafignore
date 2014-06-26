@@ -1,0 +1,9 @@
+.DS_Store
+.sass-cache
+.git
+.gitignore
+_assets/bower_components/*
+_assets/scss/*
+config.*
+*.sublime-project
+*.sublime-workspace
