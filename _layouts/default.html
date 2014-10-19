@@ -1,38 +1,33 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
 
-	<title>{{ title }} | {{ site.title }}</title>
-	<meta name="description" content="{{site.meta['Description']}}">
-	<link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+  <!-- DNS prefetching for third-party resources -->
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//ajax.googleapis.com">
 
-	<!-- Place favicon.ico and apple-touch-icon(s) in the root directory
-	<link rel="icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png" />
-	-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- Open Graph and Twitter Cards meta tags -->
-	<meta property="og:type" content="article">
-	<meta property="og:url" content="{{permalink}}">
-	<meta property="og:site_name" content="{{site.title}}">
-	<meta property="og:title" content="{{title}}">
-	<meta property="og:description" content="{{excerpt | strip_html}}">
+  <title>{{ title }} | {{ site.title }}</title>
+  <meta name="description" content="{{site.meta['Description']}}">
+  <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
 
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:url" content="{{permalink}}">
-	<meta name="twitter:title" content="{{title}}">
-	<meta name="twitter:description" content="{{excerpt | strip_html}}">
-	<meta name="twitter:site" content="{{site.meta['Twitter handle']}}">
-	<meta name="twitter:creator" content="{{site.meta['Twitter handle']}}">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png" />
 
-	<!-- DNS prefetching for third-party resources -->
-	<link rel="dns-prefetch" href="//www.google-analytics.com">
-	<link rel="dns-prefetch" href="//ajax.googleapis.com">
+  <!-- Open Graph and Twitter Cards meta tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{site.meta['Twitter handle']}}">
+  <meta property="og:site_name" content="{{site.title}}">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:url" content="{{permalink}}">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="">
 
-	<link rel="stylesheet" href="/_assets/css/style.css">
+  <link rel="stylesheet" href="/_assets/css/style.css">
 </head>
 
 <body>
@@ -43,13 +38,13 @@
 <script src="/_assets/js/main.js"></script>
 
 <script>
-	(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-	function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-	e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-	e.src='//www.google-analytics.com/analytics.js';
-	r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-	ga('create','{{site.meta['Google Analytics ID']}}');
-	ga('send','pageview');
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','{{site.meta['Google Analytics ID']}}');
+  ga('send','pageview');
 </script>
 
 </body>
