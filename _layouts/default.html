@@ -11,23 +11,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{{ title }} | {{ site.title }}</title>
-  <meta name="description" content="{{site.meta['Description']}}">
+  <meta name="description" content="{{ site.meta['Description'] }}">
   <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
 
   <link rel="icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon-precomposed.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="/_assets/css/style.css">
 
   <!-- Open Graph and Twitter Cards meta tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="{{site.meta['Twitter handle']}}">
-  <meta property="og:site_name" content="{{site.title}}">
-  <meta property="og:title" content="{{title}}">
-  <meta property="og:url" content="{{permalink}}">
+  <meta name="twitter:site" content="{{ site.meta['Twitter handle'] }}">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ title }}">
+  <!-- Choose where you'll get the images from -->
   <meta property="og:image" content="">
-  <meta property="og:description" content="">
-
-  <link rel="stylesheet" href="/_assets/css/style.css">
+  <meta property="og:url" content="{{ permalink }}">
+  <meta property="og:description" content="{{ if post }}{{ post.excerpt | strip_html }}{{ else }}{{ site.meta['Description'] }}{{ endif }}">
 </head>
 
 <body>
